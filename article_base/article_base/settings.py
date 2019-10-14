@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'articles',
         'USER': 'bazhenov',
-        'PASSWORD': '0D7762fe4c0!',
+        'PASSWORD': 'fMPmSnf&^6jmARrS',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC+3'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
