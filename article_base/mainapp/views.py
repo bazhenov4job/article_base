@@ -5,3 +5,15 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, "mainapp/index.html")
+
+
+def library(request):
+    pass
+
+
+def bookshelf(request):
+    pass
+
+
+def profile(request):
+    pass

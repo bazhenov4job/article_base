@@ -7,7 +7,6 @@ html, body {
 	min-height: 100%;
 	justify-content: center;
 	margin-left: 50px;
-
 }
 
 .clear_both {
@@ -17,7 +16,7 @@ html, body {
 .header {
 	height: 100px;
 	min-width: 90%;
-	min-width:900px;
+	min-width: 900px;
 	margin-right: 50px;
 	border-bottom: solid #777777 2px;
 }
@@ -36,7 +35,7 @@ html, body {
 .menu_main a {
 	text-decoration: none;
 	font-family: serif, "Times New Roman";
-	font-weight: bold;
+	font-weight: 200;
 	font-size: 18px;
 	font-color: black;
 }
@@ -46,6 +45,7 @@ html, body {
 	margin-top: 10px; 
 	float: right;
 	overflow: hidden;
+	font-size: 18px;
 }
 
 .article {
