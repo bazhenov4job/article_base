@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mainapp import views as mainapp
+from libraryapp import views as libraryapp
 
 urlpatterns = [
     path('', mainapp.index),
+    path('library', libraryapp.library),
     path('admin/', admin.site.urls),
 ]

@@ -94,3 +94,9 @@ html, body {
 	min-width: 900px;
 	margin-top: -80px;
 }
+
+.filters {
+	margin-top:30px;
+	border-right: 1px solid black;
+	width: 220px;
+}
