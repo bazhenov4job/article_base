@@ -19,7 +19,7 @@ from mainapp import views as mainapp
 from libraryapp import views as libraryapp
 
 urlpatterns = [
-    path('', mainapp.index),
-    path('library', libraryapp.library),
+    path('', mainapp.index, name='index'),
+    path('library', libraryapp.library, name='library'),
     path('admin/', admin.site.urls),
 ]

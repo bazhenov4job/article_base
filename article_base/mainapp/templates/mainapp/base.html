@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+
+    {% block javascript %}
+
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block header %}
+            <div class="header">
+			<ul class="menu_main">
+				<li><a href="{% url 'index' %}">Главная</a></li>
+				<li><a href="{% url 'library' %}">Библиотека</a></li>
+				<li><a href="">Моя Полка</a></li>
+				<li><a href="">Мой Профиль</a></li>
+			</ul>
+			<form class="search_field">
+						<fieldset>
+							<legend>Поиск</legend>
+							<input size="25" type="text" placeholder="Введите название статьи" name="search">
+							<input type="submit" name="search_button" value="Начать">
+						</fieldset>
+			</form>
+		</div>
+        {% endblock %}
+        <div class="clear_both"></div>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div class="clear_both"></div>
+    {% block footer %}
+        <div class="footer">
+            <p>Центр Келдыша. Вадим Баженов. 2019 г.</p>
+        </div>
+    {% endblock %}
+
+</body>
+</html>

@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Библиотека</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-			<ul class="menu_main">
-				<li><a href="">Главная</a></li>
-				<li><a href="">Библиотека</a></li>
-				<li><a href="">Моя Полка</a></li>
-				<li><a href="">Мой Профиль</a></li>
-			</ul>
-			<form class="search_field">
-						<fieldset>
-							<legend>Поиск</legend>
-							<input size="30" type="text" placeholder="Введите название статьи" name="search">
-							<input type="submit" name="search_button" value="Начать">
-						</fieldset>
-			</form>
-		</div>
-
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+	{% block content %}
 		<div class="filters">
 			<form>
 				<h3>Фильтры</h3>
@@ -42,16 +20,28 @@
 					<legend>Год</legend>
 					<input type="textbox" name="">
 				</fieldset>
-				<fieldset>
+				<fieldset class="themes">
 					<legend>Тематики</legend>
-					<input type="checkbox" id="1" name="">
-					<label for="1">Theme1</label>
-					<input type="checkbox" name="">
+						<ul>
+							{% for theme in themes %}
+							<li>
+								<input type="checkbox" id="{{ theme }}" name="">
+								<label for="{{ theme }}">{{ theme }}</label>
+							</li>
+							{% endfor %}
+						</ul>
 				</fieldset>
-				<fieldset>
+				<fieldset class="sources">
 					<legend>Источник</legend>
-					<input type="checkbox" id="1" name="">
-					<label for="1">Source1</label>
+					<ul>
+						{% for source in sources %}
+						<li>
+							<input type="checkbox" id="{{ source }}" name="">
+							<label for="{{ source }}">{{ source }}</label>
+						</li>
+						{% endfor %}
+					</ul>
+
 				</fieldset>
 				<fieldset>
 					<legend>Публикация ЦК</legend>
@@ -64,10 +54,4 @@
 		<div class="clear_both"></div>
 		<div class="article_prev"></div>
 		<div class="clear_both"></div>
-	</div>
-	<div class="footer">
-		<p>Центр Келдыша. Вадим Баженов. 2019 г.</p>	
-	</div>
-	
-</body>
-</html>
+	{% endblock %}

@@ -4,4 +4,19 @@ from django.shortcuts import render
 
 
 def library(request):
-    return render(request, "libraryapp/library.html")
+    title = 'Библиотека'
+    themes = ['ХД',
+              'ИД',
+              'МПД',
+              'ELF',
+              'VASIMR',
+              ]
+    sources = ['iepc',
+               'phys of plasmas',
+               'prop and power',
+               ]
+    content = {'title': title,
+               'themes': themes,
+               'sources': sources,
+               }
+    return render(request, "libraryapp/library.html", content)
