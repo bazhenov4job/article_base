@@ -40,6 +40,10 @@ html, body {
 	color: black;
 }
 
+.active {
+border-bottom: 1.5px solid #777777;
+}
+
 .search_field {
 	margin-right: 20px;
 	margin-top: 10px; 

@@ -15,13 +15,8 @@
 <body>
     <div class="container">
         {% block header %}
-            <div class="header">
-			<ul class="menu_main">
-				<li><a href="{% url 'index' %}">Главная</a></li>
-				<li><a href="{% url 'library' %}">Библиотека</a></li>
-				<li><a href="">Моя Полка</a></li>
-				<li><a href="">Мой Профиль</a></li>
-			</ul>
+        <div class="header">
+            {% include 'mainapp/includes/inc_menu.html' %}
 			<form class="search_field">
 						<fieldset>
 							<legend>Поиск</legend>
