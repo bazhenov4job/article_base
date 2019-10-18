@@ -4,9 +4,10 @@ html, body {
 .container {
 	width: 90%;
 	min-width: 900px;
-	min-height: 100%;
+	min-height:100%;
 	justify-content: center;
 	margin-left: 50px;
+	box-sizing: border-box;
 }
 
 .clear_both {
@@ -14,8 +15,9 @@ html, body {
 }
 
 .header {
+    padding-top: 20px;
 	height: 100px;
-	min-width: 90%;
+
 	min-width: 900px;
 	margin-right: 50px;
 	border-bottom: solid #777777 2px;
@@ -23,7 +25,6 @@ html, body {
 
 .menu_main {
 	list-style-type: none;
-	margin-top: 35px;
 	float: left;
 }
 
@@ -46,7 +47,6 @@ border-bottom: 1.5px solid #777777;
 
 .search_field {
 	margin-right: 20px;
-	margin-top: 10px; 
 	float: right;
 	overflow: hidden;
 	font-size: 18px;
@@ -76,15 +76,9 @@ border-bottom: 1.5px solid #777777;
 	color: #ff0044;
 }
 
-.keldysh {
-	width: 155px;
-	height: 205px;
-	background-image: url(keldysh.jpg);
-	position: absolute;
-	bottom: 0px;
-	margin-bottom: 73px;
-	opacity: 0.5;
-	float:right;
+.empty{
+clear: both;
+height: 90px;
 }
 
 .footer {
@@ -95,16 +89,18 @@ border-bottom: 1.5px solid #777777;
 	text-align: center;
 	width: 90%;
 	min-width: 900px;
-	margin-top: -80px;
 	padding-top: 15px;
+	clear: both;
+	margin-top: -80px;
 }
 
 .filters {
 	margin-top:30px;
-	border-right: 1px solid black;
 	width: 220px;
 	font-size: 16px;
+	float: left;
 }
+
 .filter .themes {
 padding: 0px;
 }
