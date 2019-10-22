@@ -1,0 +1,57 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+	{% block content %}
+		<div class="filters">
+			<form>
+				<h3>Фильтры</h3>
+				<fieldset>
+					<legend>Название статьи</legend>
+					<input type="textbox" name="" >
+				</fieldset>
+				<fieldset>
+					<legend>Автор</legend>
+					<input type="textbox" name="" >
+				</fieldset>
+				<fieldset>
+					<legend>DOI</legend>
+					<input type="textbox" name="" >
+				</fieldset>
+				<fieldset>
+					<legend>Год</legend>
+					<input type="textbox" name="">
+				</fieldset>
+				<fieldset class="themes">
+					<legend>Тематики</legend>
+						<ul>
+							{% for theme in themes %}
+							<li>
+								<input type="checkbox" id="{{ theme }}" name="">
+								<label for="{{ theme }}">{{ theme }}</label>
+							</li>
+							{% endfor %}
+						</ul>
+				</fieldset>
+				<fieldset class="sources">
+					<legend>Источник</legend>
+					<ul>
+						{% for source in sources %}
+						<li>
+							<input type="checkbox" id="{{ source }}" name="">
+							<label for="{{ source }}">{{ source }}</label>
+						</li>
+						{% endfor %}
+					</ul>
+
+				</fieldset>
+				<fieldset>
+					<legend>Публикация ЦК</legend>
+					<input type="checkbox" name="">
+				</fieldset>
+
+			</form>
+			
+		</div>
+		<div class="clear_both"></div>
+		<div class="article_prev"></div>
+		<div class="clear_both"></div>
+	{% endblock %}

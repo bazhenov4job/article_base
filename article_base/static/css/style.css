@@ -1,0 +1,116 @@
+html, body {
+	height: 100%;
+}
+.container {
+	width: 90%;
+	min-width: 900px;
+	min-height:100%;
+	justify-content: center;
+	margin-left: 50px;
+	box-sizing: border-box;
+}
+
+.clear_both {
+	clear:both;
+}
+
+.header {
+    padding-top: 20px;
+	height: 100px;
+
+	min-width: 900px;
+	margin-right: 50px;
+	border-bottom: solid #777777 2px;
+}
+
+.menu_main {
+	list-style-type: none;
+	float: left;
+}
+
+.menu_main li {
+	float: left;
+	margin-left: 25px;
+}
+
+.menu_main a {
+	text-decoration: none;
+	font-family: serif, "Times New Roman";
+	font-weight: 200;
+	font-size: 18px;
+	color: black;
+}
+
+.active {
+border-bottom: 1.5px solid #777777;
+}
+
+.search_field {
+	margin-right: 20px;
+	float: right;
+	overflow: hidden;
+	font-size: 18px;
+}
+
+.article {
+	width: 500px;
+}
+
+.article_name {
+	margin-left: 30px;
+	color: black;
+	text-decoration-style: none;
+	font-weight: lighter;
+}
+
+.abstract {
+	font: 16px "Arial", Verdana;
+	color: black;
+	font-weight: 800px;
+	line-height: 25px;
+	text-indent: 30px;
+}
+
+.abstract:first-letter {
+	font-size: 30px;
+	color: #ff0044;
+}
+
+.empty{
+clear: both;
+height: 90px;
+}
+
+.footer {
+	border-top: 2px solid #777777;
+	margin-left: 50px;
+	font-size: 12px;
+	height: 80px;
+	text-align: center;
+	width: 90%;
+	min-width: 900px;
+	padding-top: 15px;
+	clear: both;
+	margin-top: -80px;
+}
+
+.filters {
+	margin-top:30px;
+	width: 220px;
+	font-size: 16px;
+	float: left;
+}
+
+.filter .themes {
+padding: 0px;
+}
+
+.filters ul {
+margin-block-start: 5px;
+list-style-type: none;
+padding-inline-start: 5px;
+}
+
+.filters li {
+float: left;
+}

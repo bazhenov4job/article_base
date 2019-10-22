@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mainapp import views as mainapp
+from libraryapp import views as libraryapp
+
 
 urlpatterns = [
+    path('', mainapp.index, name='index'),
+    path('library', libraryapp.library, name='library'),
+    path('bookshelf', libraryapp.library, name='bookshelf'),
+    path('profile', libraryapp.library, name='profile'),
     path('admin/', admin.site.urls),
 ]

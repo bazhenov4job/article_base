@@ -2,6 +2,9 @@
   <dictionary name="bazhenov">
     <words>
       <w>bazhenov</w>
+      <w>endblock</w>
+      <w>endfor</w>
+      <w>libraryapp</w>
       <w>mainapp</w>
     </words>
   </dictionary>
