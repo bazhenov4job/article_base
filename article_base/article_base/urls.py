@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from mainapp import views as mainapp
 from libraryapp import views as libraryapp
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -26,3 +28,7 @@ urlpatterns = [
     path('profile', libraryapp.library, name='profile'),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

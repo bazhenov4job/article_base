@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import json
+from .models import *
 # Create your views here.
 
 with open('static/json/links.json', 'r', encoding="UTF-8") as read_file:

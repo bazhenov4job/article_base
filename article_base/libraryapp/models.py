@@ -1,5 +1,5 @@
 from django.db import models
-from libraryapp.views import load_themes
+from .views import load_themes
 
 # Create your models here.
 
