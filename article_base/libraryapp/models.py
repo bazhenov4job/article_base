@@ -27,19 +27,19 @@ class References(models.Model):
 
 
 class Article(models.Model):
-    author_id = models.ForeignKey(Authors, on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey(Authors, on_delete=models.SET_NULL, null=True)
     title = models.CharField(verbose_name="Название статьи", max_length=255, unique=True)
     year = models.PositiveSmallIntegerField(verbose_name="Год написания")
-    theme_id = models.ForeignKey(Themes, on_delete=models.SET_NULL, null=True)
+    theme = models.ForeignKey(Themes, on_delete=models.SET_NULL, null=True)
 
     def generate_quote_link(self):
         pass
         # return quote_link
 
     doi = models.CharField(max_length=64, unique=True)
-    source_id = models.ForeignKey(Sources, on_delete=models.SET_NULL, null=True)
-    abstract = models.TextField(verbose_name="Abstract", max_length=1000, blank=True, unique=True)
-    reference_id = models.ForeignKey(References, on_delete=models.SET_NULL, blank=False, null=True)
+    source = models.ForeignKey(Sources, on_delete=models.SET_NULL, null=True)
+    abstract = models.CharField(verbose_name="Abstract", max_length=255, blank=True, unique=True)
+    reference = models.ForeignKey(References, on_delete=models.SET_NULL, blank=False, null=True)
     disk_space_link = models.CharField(verbose_name="Ссылка на дисковое пространство", max_length=255, unique=True, blank=False)
     ours = models.BooleanField(verbose_name="Публикация KeRC", blank=False)
     updated = models.DateField(verbose_name="Дата добавления", auto_now=True)
