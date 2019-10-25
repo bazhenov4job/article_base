@@ -1,6 +1,6 @@
 from django.shortcuts import render
+from libraryapp.models import Sources, Themes, Article
 import json
-from .models import *
 # Create your views here.
 
 with open('static/json/links.json', 'r', encoding="UTF-8") as read_file:
@@ -12,17 +12,21 @@ def load_themes():
         themes = json.load(themes_json)['themes']
         return themes
 
+def load_sources():
+    with open('static/json/sources.json', 'r', encoding='cp1251') as sources_json:
+        sources = json.load(sources_json)['sources']
+        return sources
+
 
 def library(request):
     title = 'Библиотека'
     themes = load_themes()
-    sources = ['iepc',
-               'phys of plasmas',
-               'prop and power',
-               ]
+    sources = Sources.objects.all()
+    articles = Article.objects.all()
     content = {'title': title,
                'themes': themes,
                'sources': sources,
                'links': links,
+               'articles': articles,
                }
     return render(request, "libraryapp/library.html", content)

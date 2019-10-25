@@ -23,10 +23,10 @@
 				<fieldset class="themes">
 					<legend>Тематики</legend>
 						<ul>
-							{% for theme in themes %}
+							{% for key, value in themes.items %}
 							<li>
-								<input type="checkbox" id="{{ theme }}" name="">
-								<label for="{{ theme }}">{{ theme }}</label>
+								<input type="checkbox" id="{{ key }}" name="">
+								<label for="{{ key }}">{{ value }}</label>
 							</li>
 							{% endfor %}
 						</ul>
@@ -34,10 +34,10 @@
 				<fieldset class="sources">
 					<legend>Источник</legend>
 					<ul>
-						{% for source in sources %}
+						{% for object in sources %}
 						<li>
-							<input type="checkbox" id="{{ source }}" name="">
-							<label for="{{ source }}">{{ source }}</label>
+							<input type="checkbox" id="{{ object }}" name="">
+							<label for="{{ object }}">{{ object.source }}</label>
 						</li>
 						{% endfor %}
 					</ul>
@@ -47,11 +47,46 @@
 					<legend>Публикация ЦК</legend>
 					<input type="checkbox" name="">
 				</fieldset>
+				<fieldset>
+					<input type="submit" value="Поиск">
+				</fieldset>
 
 			</form>
 			
 		</div>
-		<div class="clear_both"></div>
-		<div class="article_prev"></div>
+		<div class="article_prev">
+			<ul>
+				{% for article in articles %}
+				<li>
+					<div class="article_i">
+						<div class="article_title">
+							<a href="#"> {{ article.title }}</a>
+						</div>
+						<div class="article_abstract">
+							{{ article.abstract }}
+						</div>
+						<div class="article_authors">
+							<ul>
+								{% for author in article.author.get_list %}
+									<li>{{ author }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="article_year">{{ article.year }}
+						</div>
+						<div class="article_themes">
+							<ul>
+								<li>
+
+								</li>
+							</ul>
+							{{ article.themes }}
+						</div>
+					</div>
+
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
 		<div class="clear_both"></div>
 	{% endblock %}
