@@ -65,6 +65,16 @@
 						<div class="article_abstract">
 							{{ article.abstract }}
 						</div>
+						<div class="article_themes">
+							<ul>
+								{% for theme in article.theme.get_list %}
+								<li>
+									{{ theme }}
+								</li>
+								{% endfor %}
+							</ul>
+							{{ article.themes }}
+						</div>
 						<div class="article_authors">
 							<ul>
 								{% for author in article.author.get_list %}
@@ -74,16 +84,7 @@
 						</div>
 						<div class="article_year">{{ article.year }}
 						</div>
-						<div class="article_themes">
-							<ul>
-								<li>
-
-								</li>
-							</ul>
-							{{ article.themes }}
-						</div>
 					</div>
-
 				</li>
 				{% endfor %}
 			</ul>

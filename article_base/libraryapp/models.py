@@ -11,20 +11,21 @@ def load_themes():
 
 
 class Themes(models.Model):
+    themes = load_themes()
 
     class Meta:
         verbose_name = "Тема"
         verbose_name_plural = "Темы"
 
     def __str__(self):
-        return self.theme
+        return ', '.join(self.get_list)
 
-    themes = load_themes()
     @property
     def get_list(self):
         theme_list = []
+        themes = load_themes()
         for key in self.__dict__.keys():
-            if 'theme' in key and self.__dict__[key]:
+            if self.__dict__[key] and key in themes:
                 theme_list.append(themes[key])
         return theme_list
 
