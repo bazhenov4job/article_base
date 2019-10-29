@@ -1,6 +1,6 @@
 {"links" : [
   {"name": "index", "title": "Главная"},
-  {"name": "library", "title": "Библиотека"},
+  {"name": "library:index", "title": "Библиотека"},
   {"name": "bookshelf", "title": "Моя Полка"},
   {"name": "profile", "title": "Мой Профиль"}
 ]

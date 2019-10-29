@@ -163,3 +163,15 @@ border-bottom: 1.5px solid #777777;
 	padding-left: 40px;
 }
 
+.article_actions ul {
+	list-style-type: none;
+}
+
+.article_actions li {
+	float: left;
+	margin-right: 30px;
+}
+
+.article_actions a {
+	text-decoration: none;
+} 

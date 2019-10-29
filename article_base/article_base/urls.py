@@ -19,11 +19,12 @@ from mainapp import views as mainapp
 from libraryapp import views as libraryapp
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import include
 
 
 urlpatterns = [
     path('', mainapp.index, name='index'),
-    path('library', libraryapp.library, name='library'),
+    path('library/', include('libraryapp.urls', namespace='library')),
     path('bookshelf', libraryapp.library, name='bookshelf'),
     path('profile', libraryapp.library, name='profile'),
     path('admin/', admin.site.urls),

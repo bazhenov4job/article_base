@@ -60,21 +60,12 @@
 				<li>
 					<div class="article_i">
 						<div class="article_title">
-							<a href="#"> {{ article.title }}</a>
+							<a href="{% url 'library:article' article.id %}"> {{ article.title }}</a>
 						</div>
 						<div class="article_abstract">
 							{{ article.abstract }}
 						</div>
-						<div class="article_themes">
-							<ul>
-								{% for theme in article.theme.get_list %}
-								<li>
-									{{ theme }}
-								</li>
-								{% endfor %}
-							</ul>
-							{{ article.themes }}
-						</div>
+
 						<div class="article_authors">
 							<ul>
 								{% for author in article.author.get_list %}

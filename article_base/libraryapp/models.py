@@ -73,6 +73,14 @@ class References(models.Model):
     def __str__(self):
         return self.reference_001
 
+    @property
+    def get_list(self):
+        ref_list = []
+        for key in self.__dict__.keys():
+            if 'reference' in key and self.__dict__[key]:
+                ref_list.append(self.__dict__[key])
+        return ref_list
+
     for i in range(1, 101):
         reference_x = "Ссылка " + str(i)
         locals()['reference_{0:0=3}'.format(i)] = models.TextField(verbose_name=reference_x, max_length=255, blank=True)
