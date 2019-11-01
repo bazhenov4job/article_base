@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from libraryapp.models import Sources, Themes, Article
+from .models import Sources, Themes, Article
 from django.shortcuts import get_object_or_404
 import json
 # Create your views here.

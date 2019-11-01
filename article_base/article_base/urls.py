@@ -23,11 +23,12 @@ from django.conf.urls import include
 
 
 urlpatterns = [
-    path('', mainapp.index, name='index'),
+    path('main/', mainapp.index, name='main'),
     path('library/', include('libraryapp.urls', namespace='library')),
     path('bookshelf', libraryapp.library, name='bookshelf'),
     path('profile', libraryapp.library, name='profile'),
     path('admin/', admin.site.urls),
+    path('auth/', include('authapp.urls', namespace='auth')),
 ]
 
 if settings.DEBUG:

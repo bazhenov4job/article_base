@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     {% block css %}
+        <!--<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
@@ -13,17 +14,11 @@
     {% endblock %}
 </head>
 <body>
+    {% if user.is_authenticated %}
     <div class="container">
         {% block header %}
         <div class="header">
             {% include 'mainapp/includes/inc_menu.html' %}
-			<form class="search_field">
-						<fieldset>
-							<legend>Поиск</legend>
-							<input size="25" type="text" placeholder="Введите название статьи" name="search">
-							<input type="submit" name="search_button" value="Начать">
-						</fieldset>
-			</form>
 		</div>
         {% endblock %}
         <div class="clear_both"></div>
@@ -39,6 +34,10 @@
             <p>Центр Келдыша. Вадим Баженов. 2019 г.</p>
         </div>
     {% endblock %}
-
+    {% else %}
+        <div class="auth_content">
+            <h3><a href="">Зарегистрируйтесь</a> или <a href="{% url 'auth:login' %}" >войдите</a></h3>
+        </div>
+    {% endif %}
 </body>
 </html>

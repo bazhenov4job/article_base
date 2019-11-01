@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp.apps.MainappConfig',
-    'libraryapp',
+    'libraryapp.apps.LibraryappConfig',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'authapp.Scientist'
 
 
 # Internationalization
