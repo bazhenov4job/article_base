@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from .forms import ScientistLoginForm
+from .forms import ScientistLoginForm, ScientistRegistrationForm
 from django.contrib import auth
 from django.urls import reverse
 
@@ -30,15 +30,27 @@ def logout(request):
     return HttpResponseRedirect(reverse('main'))
 
 
-def registration(request):
-    pass
-    """title = 'Регистрация пользователя'
-    registration_form = ScientistRegistrationForm
-    if request.method == 'POST' and registration_form.is_valid():
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        position = request.POST['position']
-        username = request.POST['username']
-        password = request.POST['password']"""
+def register(request):
+    title = 'Регистрация пользователя'
+
+    if request.method == 'POST':
+        register_form = ScientistRegistrationForm(request.POST)
+
+        if register_form.is_valid():
+            register_form.save()
+            return HttpResponseRedirect(reverse('auth:login'))
+
+    else:
+        register_form = ScientistRegistrationForm()
+
+    content = {
+        'title': title,
+        'register_form': register_form,
+    }
+    return render(request, 'authapp/register.html', content)
+
+
+def edit(request):
+    return HttpResponseRedirect(reverse('main'))
 
 

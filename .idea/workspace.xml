@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5baa976a-3b43-4667-abdf-c9e11ab4edb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/article_base/authapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/article_base/authapp/templates/authapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/article_base/authapp/templates/authapp/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/article_base/authapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bazhenov.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bazhenov.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/article_base/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/article_base/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/article_base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/article_base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/authapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/authapp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/authapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/authapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/authapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/authapp/templates/authapp/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/authapp/templates/authapp/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/authapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/authapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/authapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0002_sources.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0003_authors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0004_references.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0005_article.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0006_auto_20191023_1032.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0007_auto_20191023_1035.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/migrations/0008_auto_20191024_1118.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/static/json/links.json" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/static/json/links.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,24 +23,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article_base/authapp/models.py">
+        <entry file="file://$PROJECT_DIR$/article_base/static/json/links.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="22">
+              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article_base/authapp/forms.py">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="154">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
-                <element signature="e#0#56#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/article_base/authapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="330">
+              <caret line="36" column="63" lean-forward="true" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -73,13 +56,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article_base/authapp/urls.py">
+        <entry file="file://$PROJECT_DIR$/article_base/article_base/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+              <folding>
+                <element signature="e#636#668#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/article_base/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -87,25 +106,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="5" column="30" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="132">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html">
+        <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-              <folding>
-                <element signature="n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#!!top" />
-                <element signature="n#div#5;n#div#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -157,20 +168,20 @@
         <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html" />
         <option value="$PROJECT_DIR$/article_base/authapp/admin.py" />
         <option value="$PROJECT_DIR$/article_base/authapp/models.py" />
-        <option value="$PROJECT_DIR$/article_base/static/json/links.json" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/views.py" />
-        <option value="$PROJECT_DIR$/article_base/article_base/settings.py" />
-        <option value="$PROJECT_DIR$/article_base/article_base/urls.py" />
         <option value="$PROJECT_DIR$/article_base/mainapp/views.py" />
         <option value="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/index.html" />
-        <option value="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html" />
-        <option value="$PROJECT_DIR$/article_base/static/css/style.css" />
-        <option value="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html" />
         <option value="$PROJECT_DIR$/article_base/authapp/templates/authapp/login.html" />
-        <option value="$PROJECT_DIR$/article_base/authapp/templates/authapp/registration.html" />
+        <option value="$PROJECT_DIR$/article_base/static/css/style.css" />
+        <option value="$PROJECT_DIR$/article_base/static/json/links.json" />
+        <option value="$PROJECT_DIR$/article_base/article_base/settings.py" />
         <option value="$PROJECT_DIR$/article_base/authapp/forms.py" />
-        <option value="$PROJECT_DIR$/article_base/authapp/urls.py" />
         <option value="$PROJECT_DIR$/article_base/authapp/views.py" />
+        <option value="$PROJECT_DIR$/article_base/authapp/templates/authapp/registration.html" />
+        <option value="$PROJECT_DIR$/article_base/authapp/urls.py" />
+        <option value="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html" />
+        <option value="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html" />
+        <option value="$PROJECT_DIR$/article_base/article_base/urls.py" />
       </list>
     </option>
   </component>
@@ -197,6 +208,82 @@
               <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
               <item name="article_base" type="462c0819:PsiDirectoryNode" />
               <item name="article_base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="libraryapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -359,7 +446,7 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.1264489" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1264489" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
@@ -368,7 +455,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32394367" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32394367" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -453,13 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/test_json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -574,34 +654,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/article_base/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/json/links.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/mainapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,48 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/static/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="1880" column="12" lean-forward="true" selection-start-line="1880" selection-start-column="12" selection-end-line="1880" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/article_base/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="5" column="30" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -690,50 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/authapp/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -744,10 +718,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/views.py">
+    <entry file="file://$PROJECT_DIR$/article_base/test_json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5390">
+          <caret line="245" column="25" selection-start-line="245" selection-start-column="25" selection-end-line="245" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/authapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/authapp/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/authapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/article_base/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/static/json/links.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/article_base/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/authapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="36" column="63" lean-forward="true" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>

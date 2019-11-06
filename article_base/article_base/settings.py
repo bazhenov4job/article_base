@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp.apps.MainappConfig',
     'libraryapp.apps.LibraryappConfig',
-    'authapp',
+    'authapp.apps.AuthappConfig',
+    'shelfapp.apps.ShelfappConfig',
 ]
 
 MIDDLEWARE = [

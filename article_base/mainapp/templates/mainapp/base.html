@@ -36,7 +36,7 @@
     {% endblock %}
     {% else %}
         <div class="auth_content">
-            <h3><a href="">Зарегистрируйтесь</a> или <a href="{% url 'auth:login' %}" >войдите</a></h3>
+            <h3><a href="{% url 'auth:register' %}">Зарегистрируйтесь</a> или <a href="{% url 'auth:login' %}" >войдите</a></h3>
         </div>
     {% endif %}
 </body>

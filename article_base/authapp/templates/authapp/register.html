@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="auth_content">
-        <form action="{% url 'auth:login' %}" method="post">
+        <form action="{% url 'auth:register' %}" method="post", enctype="multipart/form-data">
         {% csrf_token %}
-        {{ login_form.as_p }}
+        {{ register_form.as_p }}
         <br>
-        <input type="submit" class="form-control" value="Войти">
+        <input type="submit" class="form-control" value="Регестрация">
     </div>
 
 </form>
