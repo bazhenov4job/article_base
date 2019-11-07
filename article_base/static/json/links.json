@@ -2,6 +2,6 @@
   {"name": "main", "title": "Главная"},
   {"name": "library:index", "title": "Библиотека"},
   {"name": "bookshelf", "title": "Моя Полка"},
-  {"name": "profile", "title": "Мой Профиль"}
+  {"name": "auth:edit", "title": "Мой Профиль"}
 ]
 }

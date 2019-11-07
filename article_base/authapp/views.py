@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from .forms import ScientistLoginForm, ScientistRegistrationForm
+from .forms import ScientistLoginForm, ScientistRegistrationForm, ScientistEditForm
 from django.contrib import auth
 from django.urls import reverse
 
@@ -51,6 +51,23 @@ def register(request):
 
 
 def edit(request):
-    return HttpResponseRedirect(reverse('main'))
+    title = 'Редактирование'
+
+    if request.method == 'POST':
+        edit_form = ScientistEditForm(request.POST, instance=request.user)
+
+        if edit_form.is_valid():
+            edit_form.save()
+            return HttpResponseRedirect(reverse('auth:edit'))
+
+    else:
+        edit_form = ScientistEditForm(instance=request.user)
+
+    content = {
+        'title': title,
+        'edit_form': edit_form,
+    }
+
+    return render(request, 'authapp/edit.html', content)
 
 
