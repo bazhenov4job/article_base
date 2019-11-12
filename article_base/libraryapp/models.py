@@ -50,7 +50,7 @@ class Authors(models.Model):
         verbose_name_plural = "Авторы"
 
     def __str__(self):
-        return self.author_001
+        return ', '.join(self.get_list)
 
     @property
     def get_list(self):
@@ -107,6 +107,6 @@ class Article(models.Model):
     source = models.ForeignKey(Sources, on_delete=models.SET_NULL, null=True)
     abstract = models.CharField(verbose_name="Abstract", max_length=255, blank=True, unique=True)
     reference = models.ForeignKey(References, on_delete=models.SET_NULL, blank=False, null=True)
-    disk_space_link = models.CharField(verbose_name="Ссылка на дисковое пространство", max_length=255, unique=True, blank=False)
+    disk_space_link = models.FileField(upload_to='uploads/pdf', verbose_name="Ссылка на дисковое пространство", blank=False)
     ours = models.BooleanField(verbose_name="Публикация KeRC", blank=False)
     updated = models.DateField(verbose_name="Дата добавления", auto_now=True)

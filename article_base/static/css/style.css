@@ -139,6 +139,13 @@ border-bottom: 1.5px solid #777777;
 	font-size: 18pt;
 }
 
+.article_source {
+    margin-top: 20px;
+    padding-top: 5px;
+    #border-top: 1px solid grey;
+    width: 300px;
+}
+
 .article_abstract {
 	margin-top: 15px;
 }
@@ -157,10 +164,8 @@ border-bottom: 1.5px solid #777777;
 }
 
 .article_year {
-	border-top: 0.5px solid grey;
 	margin-top: 10px;
 	width: 260px;
-	padding-left: 40px;
 }
 
 .article_actions ul {

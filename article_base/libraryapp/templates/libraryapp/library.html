@@ -2,41 +2,42 @@
 {% load staticfiles %}
 	{% block content %}
 		<div class="filters">
-			<form>
+			<form action="{% url 'library:index' %}" method="post">
+				{% csrf_token %}
 				<h3>Фильтры</h3>
 				<fieldset>
 					<legend>Название статьи</legend>
-					<input type="textbox" name="" >
+					<input type="textbox" name="title" >
 				</fieldset>
 				<fieldset>
 					<legend>Автор</legend>
-					<input type="textbox" name="" >
+					<input type="textbox" name="author" >
 				</fieldset>
 				<fieldset>
 					<legend>DOI</legend>
-					<input type="textbox" name="" >
+					<input type="textbox" name="doi">
 				</fieldset>
 				<fieldset>
 					<legend>Год</legend>
-					<input type="textbox" name="">
+					<input type="textbox" name="year">
 				</fieldset>
-				<fieldset class="themes">
+				<fieldset class="themes" name="request_themes">
 					<legend>Тематики</legend>
 						<ul>
 							{% for key, value in themes.items %}
 							<li>
-								<input type="checkbox" id="{{ key }}" name="">
+								<input type="checkbox" id="{{ key }}" name="{{ key }}">
 								<label for="{{ key }}">{{ value }}</label>
 							</li>
 							{% endfor %}
 						</ul>
 				</fieldset>
-				<fieldset class="sources">
+				<fieldset class="sources" name="request_sources">
 					<legend>Источник</legend>
 					<ul>
 						{% for object in sources %}
 						<li>
-							<input type="checkbox" id="{{ object }}" name="">
+							<input type="checkbox" id="{{ object }}" name="{{ object }}">
 							<label for="{{ object }}">{{ object.source }}</label>
 						</li>
 						{% endfor %}
@@ -45,7 +46,7 @@
 				</fieldset>
 				<fieldset>
 					<legend>Публикация ЦК</legend>
-					<input type="checkbox" name="">
+					<input type="checkbox" name="ours">
 				</fieldset>
 				<fieldset>
 					<input type="submit" value="Поиск">

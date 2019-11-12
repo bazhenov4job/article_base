@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Sources, Themes, Article
+from .models import Sources, Themes, Article, Authors
 from django.shortcuts import get_object_or_404
 import json
 # Create your views here.
@@ -24,7 +24,57 @@ def library(request):
     title = 'Библиотека'
     themes = load_themes()
     sources = Sources.objects.all()
-    articles = Article.objects.all()
+
+    if request.method == 'POST':
+        request_themes = {}
+        request_sources = []
+        request_dict = {}
+        request_possible = ["title",
+                            "doi",
+                            "year",
+                            "ours"
+                            ]
+        request_authors = []
+        request_themes_id = []
+        request_sources_id = []
+
+        for key in request.POST:
+            if key in themes:
+                request_themes[key] = True
+            elif key in request_possible and request.POST[key] != '':
+                request_dict[key] = request.POST[key]
+            for source in sources:
+                if key in source.source:
+                    request_sources.append(key)
+
+        for theme in Themes.objects.filter(**request_themes):
+            request_themes_id.append(theme.id)
+
+        for author in Authors.objects.all():
+            if request.POST['author'] in author.get_list:
+                request_authors.append(author.id)
+
+        for source in request_sources:
+            request_sources_id.append(Sources.objects.filter(source=source)[0].id)
+
+        print(request.POST, request_themes_id, request_sources_id)
+
+        if len(request_authors) != 0:
+            request_dict['author__id__in'] = request_authors
+        if len(request_themes_id) != 0:
+            request_dict['theme__id__in'] = request_themes_id
+        if len(request_sources_id) != 0:
+            request_dict['source__id__in'] = request_sources_id
+
+        if len(request_authors) == 0 and len(request_themes_id) == 0 and \
+           len(request_sources_id) == 0 and request.POST['title'] == ''and \
+           request.POST['doi'] == '' and request.POST['year'] == '':
+            articles = []
+        else:
+            articles = Article.objects.filter(**request_dict)
+    else:
+        articles = Article.objects.all()
+
     content = {'title': title,
                'themes': themes,
                'sources': sources,
