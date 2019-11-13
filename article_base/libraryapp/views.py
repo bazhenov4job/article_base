@@ -31,7 +31,8 @@ def library(request):
         request_dict = {}
         request_possible = ["title",
                             "doi",
-                            "year",
+                            "year__gte",
+                            "year__lte",
                             "ours"
                             ]
         request_authors = []

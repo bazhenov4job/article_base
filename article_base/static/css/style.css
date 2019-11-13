@@ -181,6 +181,11 @@ border-bottom: 1.5px solid #777777;
 	text-decoration: none;
 }
 
+.input_year {
+    width: 50px;
+    margin-right: 20px;
+}
+
 .form-control {
   display: block;
   width: 100%;
