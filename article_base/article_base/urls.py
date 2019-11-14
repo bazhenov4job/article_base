@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from mainapp import views as mainapp
 from libraryapp import views as libraryapp
+from shelfapp import views as shelfapp
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import include
@@ -25,7 +26,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('', mainapp.index, name='main'),
     path('library/', include('libraryapp.urls', namespace='library')),
-    path('bookshelf', libraryapp.library, name='bookshelf'),
+    path('bookshelf/', include('shelfapp.urls', namespace='bookshelf')),
     path('profile', libraryapp.library, name='profile'),
     path('admin/', admin.site.urls, name='admin'),
     path('auth/', include('authapp.urls', namespace='auth')),

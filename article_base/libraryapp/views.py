@@ -3,14 +3,17 @@ from django.conf import settings
 from .models import Sources, Themes, Article, Authors
 from shelfapp.models import Bookshelf
 from django.shortcuts import get_object_or_404
-from django.http import FileResponse, HttpResponse
+from django.http import HttpResponse
 import json
 from django.urls import reverse
 import os
 # Create your views here.
 
-with open('static/json/links.json', 'r', encoding="UTF-8") as read_file:
-    links = json.load(read_file)['links']
+
+def load_links():
+    with open('static/json/links.json', 'r', encoding="UTF-8") as read_file:
+        links = json.load(read_file)['links']
+        return links
 
 
 def load_themes():
@@ -25,10 +28,12 @@ def load_sources():
         return sources
 
 
-def library(request):
-    title = 'Библиотека'
-    themes = load_themes()
-    sources = Sources.objects.all()
+themes = load_themes()
+sources = Sources.objects.all()
+links = load_links()
+
+
+def filter_articles(articles, request):
 
     if request.method == 'POST':
         request_themes = {}
@@ -75,11 +80,18 @@ def library(request):
         if len(request_authors) == 0 and len(request_themes_id) == 0 and \
            len(request_sources_id) == 0 and request.POST['title'] == ''and \
            request.POST['doi'] == '' and request.POST['year'] == '':
-            articles = []
+            return []
         else:
-            articles = Article.objects.filter(**request_dict)
+            return Article.objects.filter(**request_dict)
     else:
-        articles = Article.objects.all()
+        return Article.objects.all()
+
+
+def library(request):
+    title = 'Библиотека'
+    articles = Article.objects.all()
+
+    articles = filter_articles(articles, request)
 
     content = {'title': title,
                'themes': themes,
@@ -92,6 +104,7 @@ def library(request):
 
 def article(request, pk=None):
     article_pk = get_object_or_404(Article, pk=pk)
+    links = load_links()
     content = {'links': links,
                'article': article_pk,
                }
