@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from .models import Sources, Themes, Article, Authors
+from shelfapp.models import Bookshelf
 from django.shortcuts import get_object_or_404
 import json
+from django.urls import reverse
 # Create your views here.
 
 with open('static/json/links.json', 'r', encoding="UTF-8") as read_file:
@@ -92,3 +94,11 @@ def article(request, pk=None):
                }
 
     return render(request, "libraryapp/article.html", content)
+
+
+def add_shelf(request, pk=None):
+    request_user = request.user
+    request_article = Article.objects.get(pk=pk)
+    new_shelf_article = Bookshelf(user=request_user, article=request_article)
+    new_shelf_article.save()
+    return HttpResponseRedirect(reverse('library:index'))
