@@ -8,4 +8,5 @@ urlpatterns = [
     path('', libraryapp.library, name='index'),
     path('article/<int:pk>/', libraryapp.article, name='article'),
     path('add_shelf/<int:pk>/', libraryapp.add_shelf, name='add_shelf'),
+    path('open_pdf/<int:pk>/', libraryapp.open_pdf, name='open_pdf'),
 ]

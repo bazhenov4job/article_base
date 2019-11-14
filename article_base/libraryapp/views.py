@@ -1,9 +1,12 @@
 from django.shortcuts import render, HttpResponseRedirect
+from django.conf import settings
 from .models import Sources, Themes, Article, Authors
 from shelfapp.models import Bookshelf
 from django.shortcuts import get_object_or_404
+from django.http import FileResponse, HttpResponse
 import json
 from django.urls import reverse
+import os
 # Create your views here.
 
 with open('static/json/links.json', 'r', encoding="UTF-8") as read_file:
@@ -102,3 +105,13 @@ def add_shelf(request, pk=None):
     new_shelf_article = Bookshelf(user=request_user, article=request_article)
     new_shelf_article.save()
     return HttpResponseRedirect(reverse('library:index'))
+
+
+def open_pdf(request, pk=None):
+    file_path = os.path.normpath(str(Article.objects.filter(pk=pk)[0].disk_space_link))
+    file_path = os.path.join(settings.MEDIA_ROOT, file_path)
+    with open(file_path, 'rb') as pdf:
+        file_name = file_path[(file_path.rfind('\\') + 1): file_path.rfind('.')]
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        # response['Content-Disposition'] = 'file_name={}'.format(file_name)
+        return response

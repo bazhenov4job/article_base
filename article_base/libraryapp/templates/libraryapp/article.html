@@ -44,8 +44,8 @@
     </div>
     <div class="article_actions">
         <ul>
-            <li><a href="">Открыть PDF</a></li>
-            <li><a href="{% url 'library:add_shelf' pk=article.id%}">Добавить на Мою Полку</a></li>
+            <li><a href="{% url 'library:open_pdf' pk=article.id %}">Открыть PDF</a></li>
+            <li><a href="{% url 'library:add_shelf' pk=article.id %}" target="_blank">Добавить на Мою Полку</a></li>
             <li><a href="">Редактировать</a></li>
         </ul>
     </div>
