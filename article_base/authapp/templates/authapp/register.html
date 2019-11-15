@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+<body>
+    <div class="auth_content">
+        <form action="{% url 'auth:register' %}" method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ register_form.as_p }}
+        <br>
+        <input type="submit" class="form-control" value="Регистрация">
+    </div>
+
+</form>
+</body>
+</html>

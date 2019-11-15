@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+<body>
+<h3><a href="{% url 'main' %}">Вернуться на главную</a></h3>
+    <div class="auth_content">
+        <form action="{% url 'auth:edit' %}" method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ edit_form.as_p }}
+        <br>
+        <input type="submit" class="form-control" value="Редактировать">
+    </div>
+
+</form>
+</body>
+</html>

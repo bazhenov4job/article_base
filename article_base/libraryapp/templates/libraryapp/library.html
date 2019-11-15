@@ -2,42 +2,44 @@
 {% load staticfiles %}
 	{% block content %}
 		<div class="filters">
-			<form>
+			<form action="{% url 'library:index' %}" method="post">
+				{% csrf_token %}
 				<h3>Фильтры</h3>
 				<fieldset>
 					<legend>Название статьи</legend>
-					<input type="textbox" name="" >
+					<input type="textbox" name="title" >
 				</fieldset>
 				<fieldset>
 					<legend>Автор</legend>
-					<input type="textbox" name="" >
+					<input type="textbox" name="author" >
 				</fieldset>
 				<fieldset>
 					<legend>DOI</legend>
-					<input type="textbox" name="" >
+					<input type="textbox" name="doi">
 				</fieldset>
 				<fieldset>
 					<legend>Год</legend>
-					<input type="textbox" name="">
+					<input class="input_year" type="textbox" name="year__gte">
+					<input class="input_year" type="textbox" name="year__lte">
 				</fieldset>
-				<fieldset class="themes">
+				<fieldset class="themes" name="request_themes">
 					<legend>Тематики</legend>
 						<ul>
-							{% for theme in themes %}
+							{% for key, value in themes.items %}
 							<li>
-								<input type="checkbox" id="{{ theme }}" name="">
-								<label for="{{ theme }}">{{ theme }}</label>
+								<input type="checkbox" id="{{ key }}" name="{{ key }}">
+								<label for="{{ key }}">{{ value }}</label>
 							</li>
 							{% endfor %}
 						</ul>
 				</fieldset>
-				<fieldset class="sources">
+				<fieldset class="sources" name="request_sources">
 					<legend>Источник</legend>
 					<ul>
-						{% for source in sources %}
+						{% for object in sources %}
 						<li>
-							<input type="checkbox" id="{{ source }}" name="">
-							<label for="{{ source }}">{{ source }}</label>
+							<input type="checkbox" id="{{ object }}" name="{{ object }}">
+							<label for="{{ object }}">{{ object.source }}</label>
 						</li>
 						{% endfor %}
 					</ul>
@@ -45,13 +47,40 @@
 				</fieldset>
 				<fieldset>
 					<legend>Публикация ЦК</legend>
-					<input type="checkbox" name="">
+					<input type="checkbox" name="ours">
+				</fieldset>
+				<fieldset>
+					<input type="submit" value="Поиск">
 				</fieldset>
 
 			</form>
 			
 		</div>
-		<div class="clear_both"></div>
-		<div class="article_prev"></div>
+		<div class="article_prev">
+			<ul>
+				{% for article in articles %}
+				<li>
+					<div class="article_i">
+						<div class="article_title">
+							<a href="{% url 'library:article' article.id %}"> {{ article.title }}</a>
+						</div>
+						<div class="article_abstract">
+							{{ article.abstract }}
+						</div>
+
+						<div class="article_authors">
+							<ul>
+								{% for author in article.author.get_list %}
+									<li>{{ author }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="article_year">{{ article.year }}
+						</div>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
 		<div class="clear_both"></div>
 	{% endblock %}

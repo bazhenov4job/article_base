@@ -1,0 +1,52 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="article_i">
+        <div class="article_title">
+            <a href="{% url 'library:article' article.id %}"> {{ article.title }}</a>
+        </div>
+        <div class="article_source">
+            {{ article.source }}
+        </div>
+        <div class="article_year">
+            {{ article.year }}
+        </div>
+        <div class="article_abstract">
+            {{ article.abstract }}
+        </div>
+        <div class="article_themes">
+            <ul>
+                {% for theme in article.theme.get_list %}
+                <li>
+                    {{ theme }}
+                </li>
+                {% endfor %}
+            </ul>
+            {{ article.themes }}
+        </div>
+        <div class="article_authors">
+            <ul>
+                {% for author in article.author.get_list %}
+                    <li>{{ author }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="article_refs">
+            <ol>
+            {% for reference in article.reference.get_list %}
+                <li>
+                    {{ reference }}
+                </li>
+            {% endfor %}
+            </ol>
+
+        </div>
+    </div>
+    <div class="article_actions">
+        <ul>
+            <li><a href="{% url 'library:open_pdf' pk=article.id %}">Открыть PDF</a></li>
+            <li><a href="{% url 'library:add_shelf' pk=article.id %}" target="_blank">Добавить на Мою Полку</a></li>
+            <li><a href="">Редактировать</a></li>
+        </ul>
+    </div>
+{% endblock %}
