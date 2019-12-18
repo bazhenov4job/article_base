@@ -186,6 +186,16 @@ border-bottom: 1.5px solid #777777;
     margin-right: 20px;
 }
 
+.paginator {
+    width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.paginator a {
+    text-decoration: none;
+}
+
 .form-control {
   display: block;
   width: 100%;

@@ -1,10 +1,24 @@
 <ul class="menu_main">
     {% for link in links %}
-        <li><a href="{% url link.name %}"
-        class="{% if link.name == request.resolver_match.url_name %}
-               active
-               {% endif %}"
-        >{{ link.title }}</a></li>
+        {% if link.name == "library:page" %}
+            <li>
+                <a href="{% url link.name '1' %}">
+                    {{ link.title }}
+                </a>
+            </li>
+        {% elif link.name == "bookshelf:page" %}
+                <li>
+                    <a href="{% url link.name '1' %}">
+                        {{ link.title }}
+                    </a>
+                </li>
+        {% else %}
+            <li><a href="{% url link.name %}"
+            class="{% if link.name == request.resolver_match.url_name %}
+                   active
+                   {% endif %}"
+            >{{ link.title }}</a></li>
+        {% endif %}
     {% endfor %}
     <li><a href="{% url 'auth:logout' %}">Выйти</a></li>
     {% if user.is_superuser %}

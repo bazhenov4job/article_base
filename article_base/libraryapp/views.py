@@ -1,12 +1,17 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.conf import settings
 from .models import Sources, Themes, Article, Authors
+from .forms import ArticleCreationForm, AuthorCreationForm, ThemeCreationForm, SourceCreationForm, ReferenceCreationForm
 from shelfapp.models import Bookshelf
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 import json
 from django.urls import reverse
+from django.core.paginator import Paginator
 import os
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
 # Create your views here.
 
 
@@ -68,7 +73,7 @@ def filter_articles(articles, request):
         for source in request_sources:
             request_sources_id.append(Sources.objects.filter(source=source)[0].id)
 
-        print(request.POST, request_themes_id, request_sources_id)
+        print(request, request.POST, request_themes_id, request_sources_id)
 
         if len(request_authors) != 0:
             request_dict['author__id__in'] = request_authors
@@ -87,19 +92,69 @@ def filter_articles(articles, request):
         return Article.objects.all()
 
 
-def library(request):
+def library(request, page=1):
     title = 'Библиотека'
     articles = Article.objects.all()
 
     articles = filter_articles(articles, request)
 
+    paginator = Paginator(articles, 4)
+    try:
+        page_articles = paginator.page(page)
+    except PageNotAnInteger:
+        page_articles = paginator.page(1)
+    except EmptyPage:
+        page_articles = paginator.page(paginator.num_pages)
+
     content = {'title': title,
                'themes': themes,
                'sources': sources,
                'links': links,
-               'articles': articles,
+               'articles': page_articles,
                }
     return render(request, "libraryapp/library.html", content)
+
+
+class ArticleView(ListView):
+    model = Article
+    template_name = 'libraryapp/list_view.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(ArticleView, self).get_context_data(**kwargs)
+        context['stuff'] = 'some_stuff'
+        return context
+
+
+class CreateArticle(CreateView):
+    model = Article
+    template_name = 'libraryapp/create_article.html'
+    success_url = reverse_lazy('libraryapp:index')
+    form_class = ArticleCreationForm
+
+    def get(self, request, *args, **kwargs):
+        author_id = request.
+    def get_context_data(self, **kwargs):
+        context = super(CreateArticle, self).get_context_data(**kwargs)
+        context["action_url"] = 'libraryapp:create_view'
+        return context
+
+
+class CreateAuthor(CreateView):
+    model = Authors
+    template_name = 'libraryapp/create_article.html'
+    success_url = reverse_lazy('libraryapp:index')
+    form_class = AuthorCreationForm
+
+    def get_context_data(self, **kwargs):
+        context = super(CreateAuthor, self).get_context_data(**kwargs)
+        context["action_url"] = 'libraryapp:create_author'
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        author_id = instance.id
+        print(author_id)
+        return HttpResponseRedirect(reverse('libraryapp:create_view', kwargs={'author_id': author_id}))
 
 
 def article(request, pk=None):
@@ -128,3 +183,4 @@ def open_pdf(request, pk=None):
         response = HttpResponse(pdf.read(), content_type='application/pdf')
         # response['Content-Disposition'] = 'file_name={}'.format(file_name)
         return response
+

@@ -1,7 +1,7 @@
 {"links" : [
   {"name": "main", "title": "Главная"},
-  {"name": "library:index", "title": "Библиотека"},
-  {"name": "bookshelf:index", "title": "Моя Полка"},
+  {"name": "library:page", "title": "Библиотека"},
+  {"name": "bookshelf:page", "title": "Моя Полка"},
   {"name": "auth:edit", "title": "Мой Профиль"}
 ]
 }
