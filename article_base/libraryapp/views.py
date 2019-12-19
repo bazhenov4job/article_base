@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.conf import settings
-from .models import Sources, Themes, Article, Authors
+from .models import Sources, Themes, Article, Authors, References
 from .forms import ArticleCreationForm, AuthorCreationForm, ThemeCreationForm, SourceCreationForm, ReferenceCreationForm
 from shelfapp.models import Bookshelf
 from django.shortcuts import get_object_or_404
@@ -131,17 +131,32 @@ class CreateArticle(CreateView):
     success_url = reverse_lazy('libraryapp:index')
     form_class = ArticleCreationForm
 
+    def __init__(self):
+        self.author_id = 0
+        self.theme_id = 0
+        self.ref_id = 0
+
     def get(self, request, *args, **kwargs):
-        author_id = request.
+        self.author_id = self.kwargs['author_id']
+        self.theme_id = self.kwargs['theme_id']
+        self.ref_id = self.kwargs['ref_id']
+        self.initial['author'] = Authors.objects.get(pk=self.author_id)
+        self.initial['theme'] = Themes.objects.get(pk=self.theme_id)
+        self.initial['reference'] = References.objects.get(pk=self.ref_id)
+        return super().get(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super(CreateArticle, self).get_context_data(**kwargs)
-        context["action_url"] = 'libraryapp:create_view'
+        context["action_url"] = 'libraryapp:create_article'
+        context["author_id"] = self.author_id
+        context["theme_id"] = self.theme_id
+        context["ref_id"] = self.ref_id
         return context
 
 
 class CreateAuthor(CreateView):
     model = Authors
-    template_name = 'libraryapp/create_article.html'
+    template_name = 'libraryapp/create_author.html'
     success_url = reverse_lazy('libraryapp:index')
     form_class = AuthorCreationForm
 
@@ -154,7 +169,74 @@ class CreateAuthor(CreateView):
         instance = form.save()
         author_id = instance.id
         print(author_id)
-        return HttpResponseRedirect(reverse('libraryapp:create_view', kwargs={'author_id': author_id}))
+        return HttpResponseRedirect(reverse('libraryapp:create_theme', kwargs={'author_id': author_id}))
+
+
+class CreateTheme(CreateView):
+    model = Themes
+    template_name = 'libraryapp/create_theme.html'
+    form_class = ThemeCreationForm
+    author_id = 0
+
+    def get(self, request, *args, **kwargs):
+        self.author_id = self.kwargs['author_id']
+        print(str(self.author_id) + "Метод гет")
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.author_id = self.kwargs['author_id']
+        return super().post(request, *args, *kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['action_url'] = 'libraryapp:create_theme'
+        context['author_id'] = self.author_id
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        print(instance.id)
+        print(str(self.author_id) + "метод форм валид")
+        kwargs = {'author_id': self.author_id,
+                  'theme_id': instance.id}
+        return HttpResponseRedirect(reverse('libraryapp:create_ref', kwargs=kwargs))
+
+
+class CreateRef(CreateView):
+    model = References
+    template_name = 'libraryapp/create_ref.html'
+    form_class = ReferenceCreationForm
+
+    def __init__(self, *args, **kwargs):
+        super(CreateRef, self).__init__(*args, **kwargs)
+        self.author_id = ''
+        self.theme_id = ''
+
+    def get(self, request, *args, **kwargs):
+        self.author_id = self.kwargs['author_id']
+        self.theme_id = self.kwargs['theme_id']
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.author_id = self.kwargs['author_id']
+        self.theme_id = self.kwargs['theme_id']
+        return super().post(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['action_url'] = 'libraryapp:create_ref'
+        context['author_id'] = self.author_id
+        context['theme_id'] = self.theme_id
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        print(instance.id)
+        kwargs = {'author_id': self.author_id,
+                  'theme_id': self.theme_id,
+                  'ref_id': instance.id}
+        return HttpResponseRedirect(reverse('libraryapp:create_article', kwargs=kwargs))
+
 
 
 def article(request, pk=None):
