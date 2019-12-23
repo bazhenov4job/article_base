@@ -10,7 +10,7 @@ from django.urls import reverse
 from django.core.paginator import Paginator
 import os
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse_lazy
 # Create your views here.
 
@@ -237,6 +237,17 @@ class CreateRef(CreateView):
                   'ref_id': instance.id}
         return HttpResponseRedirect(reverse('libraryapp:create_article', kwargs=kwargs))
 
+
+class EditArticle(UpdateView):
+    model = Article
+    template_name = 'libraryapp/edit_article.html'
+
+    def __init__(self, *args, **kwargs):
+        super(EditArticle, self).__init__(*args, **kwargs)
+        self.article_id = ''
+
+    def post(self, request, *args, **kwargs):
+        self.article_id = self.kwargs['']
 
 
 def article(request, pk=None):
