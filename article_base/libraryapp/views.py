@@ -180,7 +180,6 @@ class CreateTheme(CreateView):
 
     def get(self, request, *args, **kwargs):
         self.author_id = self.kwargs['author_id']
-        print(str(self.author_id) + "Метод гет")
         return super().get(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
@@ -195,8 +194,6 @@ class CreateTheme(CreateView):
 
     def form_valid(self, form):
         instance = form.save()
-        print(instance.id)
-        print(str(self.author_id) + "метод форм валид")
         kwargs = {'author_id': self.author_id,
                   'theme_id': instance.id}
         return HttpResponseRedirect(reverse('libraryapp:create_ref', kwargs=kwargs))
@@ -241,13 +238,137 @@ class CreateRef(CreateView):
 class EditArticle(UpdateView):
     model = Article
     template_name = 'libraryapp/edit_article.html'
+    form_class = ArticleCreationForm
 
     def __init__(self, *args, **kwargs):
         super(EditArticle, self).__init__(*args, **kwargs)
         self.article_id = ''
 
+    def get(self, request, **kwargs):
+        self.article_id = self.kwargs['pk']
+        return super().get(request, **kwargs)
+
+    def get_queryset(self, **kwargs):
+        return Article.objects.filter(pk=self.article_id)
+
+    def post(self, request, **kwargs):
+        self.article_id = self.kwargs['pk']
+        return super().post(request, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = self.article_id
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        instance.save()
+        return HttpResponseRedirect(reverse('library:article', kwargs={'pk': self.article_id}))
+
+
+class EditTheme(UpdateView):
+    model = Themes
+    form_class = ThemeCreationForm
+    template_name = 'libraryapp/edit_theme.html'
+
+    def __init__(self, *args, **kwargs):
+        super(EditTheme, self).__init__(*args, **kwargs)
+        self.theme_id = ''
+        self.article_id = ''
+
+    def get(self, request, *args, **kwargs):
+        self.theme_id = self.kwargs['pk']
+        self.article_id = self.kwargs['article_id']
+        return super().get(request, *args, **kwargs)
+
     def post(self, request, *args, **kwargs):
-        self.article_id = self.kwargs['']
+        self.theme_id = self.kwargs['pk']
+        self.article_id = self.kwargs['article_id']
+        return super().post(request, *args, **kwargs)
+
+    def get_queryset(self):
+        return Themes.objects.filter(pk=self.theme_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = self.theme_id
+        context['article_id'] = self.article_id
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        instance.save()
+        return HttpResponseRedirect(reverse('library:article', kwargs={'pk': self.article_id}))
+
+
+class EditAuthor(UpdateView):
+    model = Authors
+    form_class = AuthorCreationForm
+    template_name = 'libraryapp/edit_author.html'
+
+    def __init__(self, *args, **kwargs):
+        super(EditAuthor, self).__init__(*args, **kwargs)
+        self.author_id = ''
+        self.article_id = ''
+
+    def get(self, request, *args, **kwargs):
+        self.author_id = self.kwargs['pk']
+        self.article_id = self.kwargs['article_id']
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.author_id = self.kwargs['pk']
+        self.article_id = self.kwargs['article_id']
+        return super().post(request, *args, **kwargs)
+
+    def get_queryset(self):
+        return Authors.objects.filter(pk=self.author_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['article_id'] = self.article_id
+        context['pk'] = self.author_id
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        instance.save()
+        return HttpResponseRedirect(reverse('library:article', kwargs={'pk': self.article_id}))
+
+
+class EditRefs(UpdateView):
+    model = References
+    form_class = ReferenceCreationForm
+    template_name = 'libraryapp/edit_refs.html'
+
+    def __init__(self, *args, **kwargs):
+        super(EditRefs, self).__init__(*args, **kwargs)
+        self.ref_id = ''
+        self.article_id = ''
+
+    def get(self, request, *args, **kwargs):
+        self.ref_id = self.kwargs['pk']
+        self.article_id = self.kwargs['article_id']
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.ref_id = self.kwargs['pk']
+        self.article_id = self.kwargs['article_id']
+        return super().post(request, *args, **kwargs)
+
+    def get_queryset(self):
+        return References.objects.filter(pk=self.ref_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['article_id'] = self.article_id
+        context['pk'] = self.ref_id
+        return context
+
+    def form_valid(self, form):
+        instance = form.save()
+        instance.save()
+        return HttpResponseRedirect(reverse('library:article', kwargs={'pk': self.article_id}))
 
 
 def article(request, pk=None):

@@ -53,7 +53,7 @@ class ReferenceCreationForm(forms.ModelForm):
 class ArticleCreationForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ('title', 'year', 'doi', 'abstract', 'disk_space_link', 'ours')
+        fields = '__all__'
 
     def __init__(self, *args, **kwargs):
         super(ArticleCreationForm, self).__init__(*args, **kwargs)

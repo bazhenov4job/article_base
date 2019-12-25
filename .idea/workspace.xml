@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5baa976a-3b43-4667-abdf-c9e11ab4edb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_author.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_refs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_theme.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/libraryapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/libraryapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article_base/libraryapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/libraryapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/media/uploads/pdf/mysql.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/article_base/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article_base/static/json/themes.json" beforeDir="false" afterPath="$PROJECT_DIR$/article_base/static/json/themes.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,103 +21,122 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-                  <folding>
-                    <element signature="n#div#0;n#!!top" />
-                    <element signature="n#form#0;n#div#0;n#!!top" />
-                    <element signature="n#fieldset#4;n#form#0;n#div#0;n#!!top" />
-                    <element signature="n#fieldset#5;n#form#0;n#div#0;n#!!top" />
-                    <element signature="n#ul#0;n#div#1;n#!!top" />
-                    <element signature="n#div#1;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-                    <element signature="n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-                    <element signature="n#ul#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-                    <element signature="n#div#3;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-                    <element signature="n#div#2;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/list_view.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/article_base/libraryapp/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="248" column="22" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#57#0" expanded="true" />
-                    <element signature="e#681#820#0" />
-                    <element signature="e#846#994#0" />
-                    <element signature="e#1021#1175#0" />
-                    <element signature="e#1301#3212#0" />
-                    <element signature="e#3249#3857#0" />
-                    <element signature="e#3893#4153#0" />
-                    <element signature="e#4193#5236#0" />
-                    <element signature="e#5275#5851#0" />
-                    <element signature="e#5889#6900#0" />
-                    <element signature="e#6936#8170#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#!!top" />
-                    <element signature="n#div#1;n#div#0;n#!!top" />
-                    <element signature="n#div#2;n#div#0;n#!!top" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/article_base/libraryapp/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+              <folding>
+                <element signature="n#div#0;n#!!top" />
+                <element signature="n#form#0;n#div#0;n#!!top" />
+                <element signature="n#fieldset#4;n#form#0;n#div#0;n#!!top" />
+                <element signature="n#fieldset#5;n#form#0;n#div#0;n#!!top" />
+                <element signature="n#ul#0;n#div#1;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+                <element signature="n#ul#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+                <element signature="n#div#2;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="184" column="31" lean-forward="true" selection-start-line="184" selection-start-column="31" selection-end-line="184" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_refs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_theme.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_author.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,14 +158,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test string.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/article_base/static/json/menu.json" />
         <option value="$PROJECT_DIR$/article_base/links.json" />
         <option value="$PROJECT_DIR$/article_base/themes.txt" />
         <option value="$PROJECT_DIR$/article_base/themes.json" />
         <option value="$PROJECT_DIR$/article_base/test_json.py" />
-        <option value="$PROJECT_DIR$/article_base/static/json/themes.json" />
         <option value="$PROJECT_DIR$/article_base/load_sources.py" />
         <option value="$PROJECT_DIR$/article_base/sources.txt" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/migrations/0005_article.py" />
@@ -176,16 +195,20 @@
         <option value="$PROJECT_DIR$/article_base/mainapp/templates/mainapp/includes/inc_menu.html" />
         <option value="$PROJECT_DIR$/article_base/authapp/templates/authapp/register.html" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/list_view.html" />
-        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/create_author.html" />
-        <option value="$PROJECT_DIR$/article_base/libraryapp/urls.py" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/create_article.html" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/create_ref.html" />
         <option value="$PROJECT_DIR$/article_base/static/css/style.css" />
+        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html" />
+        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html" />
+        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_theme.html" />
+        <option value="$PROJECT_DIR$/article_base/static/json/themes.json" />
+        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_refs.html" />
+        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_author.html" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html" />
+        <option value="$PROJECT_DIR$/article_base/libraryapp/urls.py" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/forms.py" />
         <option value="$PROJECT_DIR$/article_base/libraryapp/views.py" />
-        <option value="$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html" />
       </list>
     </option>
   </component>
@@ -299,6 +322,13 @@
               <item name="article_base" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="article_base" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -462,7 +492,7 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.14805058" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14805058" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
@@ -471,7 +501,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.28494042" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.28494042" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -538,19 +568,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/article_base/authapp/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/css/bootstrap.css.map">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="1880" column="12" lean-forward="true" selection-start-line="1880" selection-start-column="12" selection-end-line="1880" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/authapp/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -594,13 +611,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/article_base/libraryapp/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/json/themes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -683,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/article_base/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="84" column="35" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/shelfapp/templates/shelfapp/library.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -697,16 +700,6 @@
           <folding>
             <element signature="n#div#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/json/sources.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/static/json/links.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -774,16 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/article_base/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/authapp/templates/authapp/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -791,46 +774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/create_article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#form#0;n#div#0;n#!!top" />
-            <element signature="n#fieldset#4;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#fieldset#5;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#ul#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-            <element signature="n#ul#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/list_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -842,13 +789,6 @@
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/create_ref.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="47" lean-forward="true" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -879,16 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article_base/authapp/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -896,35 +826,6 @@
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -938,22 +839,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/views.py">
+    <entry file="file://$PROJECT_DIR$/article_base/article_base/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="85" column="28" lean-forward="true" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/list_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/create_ref.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/static/json/themes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/static/json/sources.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/static/json/links.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/article_base/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_theme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/library.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#form#0;n#div#0;n#!!top" />
+            <element signature="n#fieldset#4;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#fieldset#5;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+            <element signature="n#ul#0;n#div#2;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#li#0;n#ul#0;n#div#1;n#!!top" />
+            <element signature="n#div#2;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="248" column="22" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="22" />
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/edit_refs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/templates/libraryapp/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article_base/libraryapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="184" column="31" lean-forward="true" selection-start-line="184" selection-start-column="31" selection-end-line="184" selection-end-column="31" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
-            <element signature="e#681#820#0" />
-            <element signature="e#846#994#0" />
-            <element signature="e#1021#1175#0" />
-            <element signature="e#1301#3212#0" />
-            <element signature="e#3249#3857#0" />
-            <element signature="e#3893#4153#0" />
-            <element signature="e#4193#5236#0" />
-            <element signature="e#5275#5851#0" />
-            <element signature="e#5889#6900#0" />
-            <element signature="e#6936#8170#0" />
           </folding>
         </state>
       </provider>

@@ -13,7 +13,9 @@
         </div>
         <div class="article_abstract">
             {{ article.abstract }}
-            <a class="edit" href="">Редактировать</a>
+            <div>
+                <a class="edit" href="{% url 'library:edit_article' article.id %}">Редактировать</a>
+            </div>
         </div>
         <div class="article_themes">
             <ul>
@@ -24,7 +26,7 @@
                 {% endfor %}
             </ul>
             {{ article.themes }}
-            <a class="edit" href="">Редактировать</a>
+            <a class="edit" href="{% url 'library:edit_theme' article.id article.theme.id %}">Редактировать</a>
         </div>
         <div class="article_authors">
             <ul>
@@ -32,7 +34,7 @@
                     <li>{{ author }}</li>
                 {% endfor %}
             </ul>
-            <a class="edit" href="">Редактировать</a>
+            <a class="edit" href="{% url 'library:edit_author' article.id article.author.id %}">Редактировать</a>
         </div>
         <div class="article_refs">
             <ol>
@@ -42,7 +44,7 @@
                 </li>
             {% endfor %}
             </ol>
-            <a class="edit" href="">Редактировать</a>
+            <a class="edit" href="{% url 'library:edit_refs' article.id article.reference.id %}">Редактировать</a>
         </div>
     </div>
     <div class="article_actions">
