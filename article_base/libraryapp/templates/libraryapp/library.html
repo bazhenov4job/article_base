@@ -57,6 +57,7 @@
 			
 		</div>
 		<div class="article_prev">
+			<a href="{% url 'libraryapp:create_author' %}">Добавить статью</a>
 			<ul>
 				{% for article in articles %}
 				<li>
@@ -81,6 +82,21 @@
 				</li>
 				{% endfor %}
 			</ul>
+		</div>
+		<div class="paginator">
+			{% if articles.has_previous %}
+				<a href="{% url 'library:page' articles.previous_page_number %}">
+					<
+				</a>
+			{% endif %}
+			<span class="current">
+				страница {{ articles.number }} из {{ articles.paginator.num_pages }}
+			</span>
+			{% if articles.has_next %}
+				<a href="{% url 'library:page' articles.next_page_number %}">
+					>
+				</a>
+			{% endif %}
 		</div>
 		<div class="clear_both"></div>
 	{% endblock %}

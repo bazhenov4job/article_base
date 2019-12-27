@@ -40,7 +40,7 @@ html, body {
 }
 
 .active {
-border-bottom: 1.5px solid #777777;
+    border-bottom: 1.5px solid #777777;
 }
 
 .search_field {
@@ -142,7 +142,7 @@ border-bottom: 1.5px solid #777777;
 .article_source {
     margin-top: 20px;
     padding-top: 5px;
-    #border-top: 1px solid grey;
+    border-top: 1px solid grey;
     width: 300px;
 }
 
@@ -168,6 +168,10 @@ border-bottom: 1.5px solid #777777;
 	width: 260px;
 }
 
+.article_refs {
+    border-top: 0.5px solid grey;
+}
+
 .article_actions ul {
 	list-style-type: none;
 }
@@ -184,6 +188,16 @@ border-bottom: 1.5px solid #777777;
 .input_year {
     width: 50px;
     margin-right: 20px;
+}
+
+.paginator {
+    width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.paginator a {
+    text-decoration: none;
 }
 
 .form-control {
@@ -270,4 +284,11 @@ form_control ul {
     width: 500px;
     margin: 0 auto;
     margin-top: 100px;
+}
+
+.edit {
+    font-size: 12px;
+    color: darkred;
+    align: right;
+    text-decoration: none;
 }
