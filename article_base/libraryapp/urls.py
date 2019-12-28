@@ -18,5 +18,6 @@ urlpatterns = [
     path('edit_refs/<int:article_id>/<int:pk>/', libraryapp.EditRefs.as_view(), name='edit_refs'),
     path('article/<int:pk>/', libraryapp.article, name='article'),
     path('add_shelf/<int:pk>/', libraryapp.add_shelf, name='add_shelf'),
+    path('delete_from_shelf/<int:pk>', libraryapp.delete_from_shelf, name='delete_from_shelf'),
     path('open_pdf/<int:pk>/', libraryapp.open_pdf, name='open_pdf'),
 ]

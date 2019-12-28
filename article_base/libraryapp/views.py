@@ -374,8 +374,10 @@ class EditRefs(UpdateView):
 def article(request, pk=None):
     article_pk = get_object_or_404(Article, pk=pk)
     links = load_links()
+    article_added = bool(len(Bookshelf.objects.filter(user=request.user, article=article_pk)))
     content = {'links': links,
                'article': article_pk,
+               'article_added': article_added
                }
 
     return render(request, "libraryapp/article.html", content)
@@ -386,7 +388,14 @@ def add_shelf(request, pk=None):
     request_article = Article.objects.get(pk=pk)
     new_shelf_article = Bookshelf(user=request_user, article=request_article)
     new_shelf_article.save()
-    return HttpResponseRedirect(reverse('library:index'))
+    return HttpResponseRedirect(reverse('library:article', kwargs={'pk': pk}))
+
+
+def delete_from_shelf(request, pk=None):
+    request_user = request.user
+    request_article = Article.objects.get(pk=pk)
+    Bookshelf.objects.filter(user=request_user, article=request_article).delete()
+    return HttpResponseRedirect(reverse('library:article', kwargs={'pk': pk}))
 
 
 def open_pdf(request, pk=None):

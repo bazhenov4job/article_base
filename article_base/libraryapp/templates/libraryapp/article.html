@@ -50,7 +50,13 @@
     <div class="article_actions">
         <ul>
             <li><a href="{% url 'library:open_pdf' pk=article.id %}">Открыть PDF</a></li>
-            <li><a href="{% url 'library:add_shelf' pk=article.id %}" target="_blank">Добавить на Мою Полку</a></li>
+            <li>
+                {% if article_added %}
+                    <a href="{% url 'library:delete_from_shelf' article.id %}" >Удалить c Моей Полки</a>
+                {% else %}
+                    <a href="{% url 'library:add_shelf' article.id %}" >Добавить на Мою Полку</a>
+                {% endif %}
+            </li>
         </ul>
     </div>
 {% endblock %}
