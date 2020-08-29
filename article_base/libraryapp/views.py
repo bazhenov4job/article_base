@@ -73,8 +73,6 @@ def filter_articles(articles, request):
         for source in request_sources:
             request_sources_id.append(Sources.objects.filter(source=source)[0].id)
 
-        print(request, request.POST, request_themes_id, request_sources_id)
-
         if len(request_authors) != 0:
             request_dict['author__id__in'] = request_authors
         if len(request_themes_id) != 0:
@@ -168,7 +166,6 @@ class CreateAuthor(CreateView):
     def form_valid(self, form):
         instance = form.save()
         author_id = instance.id
-        print(author_id)
         return HttpResponseRedirect(reverse('libraryapp:create_theme', kwargs={'author_id': author_id}))
 
 
@@ -228,7 +225,7 @@ class CreateRef(CreateView):
 
     def form_valid(self, form):
         instance = form.save()
-        print(instance.id)
+        
         kwargs = {'author_id': self.author_id,
                   'theme_id': self.theme_id,
                   'ref_id': instance.id}
